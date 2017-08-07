@@ -1,7 +1,6 @@
 
 let portfolio = document.querySelector('.container');
 function reqListener() {
-  // Make sure you define youre variabe(in this case data..) outside your loop"
  let data = JSON.parse(this.responseText)
     portfolio.innerHTML += `
     <article class="user-info">
@@ -24,7 +23,6 @@ function reqListener() {
   `
 }
 let req = new XMLHttpRequest();
-// req.open('GET', 'http://192.168.1.12:8000/octocat');
 req.open('GET', 'https://api.github.com/users/crmiller10');
 req.addEventListener('load', reqListener);
 req.send();
